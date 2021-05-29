@@ -217,6 +217,15 @@ h1{
   padding-bottom: 20px;
 }
 
+.part3{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
 
 p{
   margin: 20px;
