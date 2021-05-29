@@ -19,7 +19,7 @@
         <div class="card2">
             <div class="part3">
                 <div class="container">
-                    <form action="/action_page.php">
+                    <form action="" method="post">
                         <label for="fname">Nama Pertama</label>
                         <input type="text" id="fname" name="firstname" placeholder="Masukan nama anda..">
             
@@ -27,12 +27,12 @@
                         <input type="text" id="lname" name="lastname" placeholder="Masukan nama anda..">
             
                         <label for="country">Alamat</label>
-                        <input type="text" id="alamat" name="lastname" placeholder="Alamat Lengkap..">
+                        <input type="text" id="alamat" name="alamat" placeholder="Alamat Lengkap..">
             
                         <label for="subject">Keluhan</label>
                         <textarea id="subject" name="subject" placeholder="Tuliskan keluhan anda.." style="height:200px"></textarea>
             
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" name="masuk">
                     </form>
                 </div>
                 <img src="1869354.png" alt="Avatar" style="width:100% ">
@@ -43,6 +43,18 @@
         <div class="footer">
             <h2>Media Informasi Covid-19</h2>
         </div>
+        <?php
+        include "koneksi.php";
+        if(isset($_POST['masuk'])){
+            mysqli_query($koneksi,"insert into pasien set
+            namapertama = '$_POST[firstname]',
+            namakedua = '$_POST[lastname]',
+            alamat = '$_POST[alamat]',
+            keluhan = '$_POST[subject]'");
+
+            echo "Laporan anda telah disimpan";
+        }
+        ?>
         <script src="Sihir.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
     </body>
