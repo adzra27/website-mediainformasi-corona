@@ -11,7 +11,7 @@
         <div class="topnav">
             <h1 class="judul">COVID.<span style="color: black;">info</span></h1>
             <a href="Contact.html" class="active">KONTAK</a>
-            <a href="#">PENANGAN</a>
+            <a href="PENANGAN.html">PENANGANAN</a>
             <a href="Gejala.html" >GEJALA</a>
             <a href="Home.html">HOME</a>
         </div>
