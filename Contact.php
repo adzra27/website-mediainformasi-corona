@@ -52,10 +52,13 @@
             alamat = '$_POST[alamat]',
             keluhan = '$_POST[subject]'");
 
-            echo "Laporan anda telah disimpan";
+            
         }
+        $nm=$_POST['firstname'];
+        $msg="Data Berhasil dikirim. dengan nama ".$nm;
+        echo '<script type="text/javascript">alert("' . $msg . '")</script>';
         ?>
-        <script src="Sihir.js"></script>
+        <script src="Sihir.js">alert()</script>
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
     </body>
 </html>
